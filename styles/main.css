@@ -1,3 +1,6 @@
+html, body {
+    overflow-x: hidden;
+}
 body {
     font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
     background:
@@ -111,15 +114,19 @@ h2 {
 }
 
 .video {
+    background: none;
+    box-shadow: none;
+    border: none;
+    margin: 40px auto 0 auto;
+    padding: 32px 20px;
+    max-width: 1100px;
     text-align: center;
+    border-radius: 18px;
 }
 .video iframe {
-    border-radius: 16px;
-    box-shadow: 0 4px 24px #000a;
-    width: 90vw;
-    max-width: 560px;
-    height: 315px;
-    border: 2px solid #22243a;
+    border: none;
+    box-shadow: none;
+    background: none;
 }
 
 .features ul {
@@ -144,41 +151,45 @@ h2 {
 .buy {
     text-align: center;
     margin-top: 60px;
+    background: none;
+    box-shadow: none;
+    border: none;
 }
 
 footer {
-    background: rgba(10, 10, 20, 0.95);
+    background: #0a0a14;
     color: #b0c7ff;
     text-align: center;
-    padding: 24px 0 12px 0;
+    padding: 40px 0 18px 0;
     font-size: 1rem;
-    margin-top: 60px;
+    margin: 0;
     letter-spacing: 1px;
     border-top: none;
-    border-radius: 0 0 18px 18px;
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
 }
-
-.social {
+footer .social {
     text-align: center;
-    margin: 50px 0 30px 0;
+    margin: 0 0 30px 0;
 }
-.social h2 {
+footer .social h2 {
     color: #1b6fff;
     margin-bottom: 18px;
     font-size: 1.7rem;
     letter-spacing: 1px;
 }
-.social-links {
+footer .social-links {
     display: flex;
     justify-content: center;
     gap: 32px;
 }
-.social-links a {
+footer .social-links a {
     color: #1b6fff;
     font-size: 2.2rem;
     transition: color 0.2s, transform 0.2s;
 }
-.social-links a:hover {
+footer .social-links a:hover {
     color: #00c3ff;
     transform: scale(1.15);
 }
