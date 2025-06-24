@@ -176,7 +176,7 @@ footer .social {
     margin: 0 0 30px 0;
 }
 footer .social h2 {
-    color: #1b6fff;
+    color: #ffffff;
     margin-bottom: 18px;
     font-size: 1.7rem;
     letter-spacing: 1px;
@@ -194,6 +194,18 @@ footer .social-links a {
 footer .social-links a:hover {
     color: #00c3ff;
     transform: scale(1.15);
+}
+footer .social-links a .fa-instagram {
+    color: #E4405F;
+}
+footer .social-links a .fa-facebook {
+    color: #1877F3;
+}
+footer .social-links a .fa-twitch {
+    color: #9147FF;
+}
+footer .social-links a .fa-k {
+    color: #53FC18;
 }
 
 .description {
