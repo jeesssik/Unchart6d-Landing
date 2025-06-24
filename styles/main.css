@@ -152,10 +152,15 @@ h2 {
 
 .buy {
     text-align: center;
-    margin-top: 60px;
-    background: none;
-    box-shadow: none;
-    border: none;
+    margin: 60px auto 0 auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
 footer {
