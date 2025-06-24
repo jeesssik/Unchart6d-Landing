@@ -1,87 +1,91 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Segoe UI', 'Arial', sans-serif;
-    background: linear-gradient(135deg, #232526 0%, #414345 100%);
-    color: #fff;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    background:
+        linear-gradient(to bottom, rgba(10,10,14,0.95) 0%, rgba(10,10,14,0.7) 40%, rgba(10,10,14,0.3) 100%),
+        url('../imgs/wall.webp') center center / cover no-repeat fixed;
+    color: #f3f3e6;
     min-height: 100vh;
 }
 
+
 header.hero {
-    background: linear-gradient(rgba(20,20,20,0.7), rgba(20,20,20,0.7)), url('../imgs/portada.jpg') center/cover no-repeat;
-    text-align: center;
-    padding: 60px 20px 40px 20px;
-    position: relative;
-    min-height: 420px;
+    background:
+        linear-gradient(180deg, rgba(10,10,14,0.85) 0%, rgba(10,10,14,0.4) 100%),
+        url('../imgs/portada.jpg') center center / cover no-repeat;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end; /* Cambia a flex-end para alinear abajo */
+    text-align: center;
+    border-bottom: none;
+    box-shadow: 0 8px 32px #000a;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 0; /* Quita el padding inferior */
 }
 
 .logo {
-    width: 480px;
-    max-width: 95vw;
-    margin-bottom: 28px;
-    filter: drop-shadow(0 6px 24px #000b);
+    width: 420px;
+    max-width: 90vw;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    filter: drop-shadow(0 8px 32px #000b);
     transition: transform 0.2s;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 .logo:hover {
-    transform: scale(1.04);
-}
-
-header.hero h1 {
-    font-size: 3rem;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    text-shadow: 0 2px 8px #000a;
+    transform: scale(1.03);
 }
 
 header.hero p {
     font-size: 1.3rem;
     margin-bottom: 30px;
-    color: #ffd700;
+    color: #b0c7ff;
     text-shadow: 0 2px 8px #000a;
 }
 
 .cta-btn {
     display: inline-block;
-    background: linear-gradient(90deg, #e6b800 0%, #ffcc29 100%);
-    color: #232526;
+    background: linear-gradient(90deg, #1b6fff 0%, #00c3ff 100%);
+    color: #fff;
     font-weight: bold;
-    padding: 16px 40px;
+    padding: 18px 48px;
     border-radius: 40px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-decoration: none;
     box-shadow: 0 4px 16px #0007;
+    margin-top: 24px;
+    letter-spacing: 1px;
+    border: none;
     transition: background 0.2s, transform 0.2s;
-    margin-top: 10px;
 }
 .cta-btn:hover {
-    background: linear-gradient(90deg, #ffcc29 0%, #e6b800 100%);
-    transform: scale(1.05);
+    background: linear-gradient(90deg, #00c3ff 0%, #1b6fff 100%);
+    transform: scale(1.06);
 }
 
-section {
+section, footer {
+    background: rgba(10, 10, 20, 0.92);
+    border-radius: 18px;
+    margin: 40px auto 0 auto;
+    padding: 32px 20px;
     max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
+    box-shadow: 0 4px 24px #0007;
+    border: none;
 }
 
-.gallery h2, .video h2, .features h2, .buy h2 {
-    font-size: 2rem;
+h2 {
+    color: #ffffff;
     margin-bottom: 20px;
     letter-spacing: 1px;
-    color: #ffd700;
     text-shadow: 0 2px 8px #000a;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 50px;
 }
 
 .images {
@@ -99,6 +103,7 @@ section {
     transition: transform 0.2s, box-shadow 0.2s;
     object-fit: cover;
     height: 180px;
+    border: 2px solid #22243a;
 }
 .images img:hover {
     transform: scale(1.04);
@@ -114,6 +119,7 @@ section {
     width: 90vw;
     max-width: 560px;
     height: 315px;
+    border: 2px solid #22243a;
 }
 
 .features ul {
@@ -128,8 +134,8 @@ section {
     position: relative;
 }
 .features li::before {
-    content: "★";
-    color: #ffd700;
+    content: "▶";
+    color: #1b6fff;
     position: absolute;
     left: 0;
     font-size: 1.2rem;
@@ -141,14 +147,15 @@ section {
 }
 
 footer {
-    background: #181818;
-    color: #aaa;
+    background: rgba(10, 10, 20, 0.95);
+    color: #b0c7ff;
     text-align: center;
     padding: 24px 0 12px 0;
     font-size: 1rem;
     margin-top: 60px;
     letter-spacing: 1px;
-    border-top: 2px solid #ffd70033;
+    border-top: none;
+    border-radius: 0 0 18px 18px;
 }
 
 .social {
@@ -156,7 +163,7 @@ footer {
     margin: 50px 0 30px 0;
 }
 .social h2 {
-    color: #ffd700;
+    color: #1b6fff;
     margin-bottom: 18px;
     font-size: 1.7rem;
     letter-spacing: 1px;
@@ -167,25 +174,124 @@ footer {
     gap: 32px;
 }
 .social-links a {
-    color: #fff;
+    color: #1b6fff;
     font-size: 2.2rem;
     transition: color 0.2s, transform 0.2s;
 }
 .social-links a:hover {
-    color: #ffd700;
+    color: #00c3ff;
     transform: scale(1.15);
+}
+
+.description {
+    background: none;
+    box-shadow: none;
+    border: none;
+    text-align: center;
+    margin: 40px auto 0 auto;
+    padding: 32px 20px;
+    max-width: 900px;
+}
+
+.description h2 {
+    color: #1b6fff;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+}
+.description p {
+    font-size: 1.15rem;
+    margin-bottom: 16px;
+    color: #f3f3e6;
+    line-height: 1.6;
+}
+
+.game-title {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-shadow: 0 4px 24px #000, 0 2px 8px #1b6fff99;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    line-height: 1.1;
+}
+
+.game-title-img {
+    width: 1120px;
+    max-width: 95vw;
+    margin: 0 auto 32px auto; /* Espacio solo abajo */
+    display: block;
+    filter: drop-shadow(0 8px 32px #000) drop-shadow(0 2px 8px #1b6fff99);
+    transition: transform 0.2s;
+    position: relative;
+    bottom: 0;
+}
+
+.que-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.que-card {
+    width: 340px;
+    max-width: 90vw;
+    background: 
+        linear-gradient(180deg, rgba(10,10,20,0.92) 60%, rgba(10,10,20,0.98) 100%),
+        url('../imgs/queFondo.webp') center center / cover no-repeat;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #000a;
+    padding: 32px 24px 24px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid #1b6fff33;
+}
+.que-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 24px #000a;
+    display: block;
+}
+
+/* Nueva sección para "¿Qué es Uncharted?" */
+.que-es-uncharted {
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 64px 0 64px 0;
+    margin: 48px auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
 }
 
 /* Responsive */
 @media (max-width: 700px) {
-    header.hero h1 {
-        font-size: 2rem;
+    .game-title-img {
+        width: 90vw;
+        margin-bottom: 16px;
     }
-    .images img {
-        width: 100%;
-        height: 140px;
-    }
-    .video iframe {
-        height: 180px;
+    header.hero {
+        min-height: 220px;
+        padding: 30px 10px 0 10px;
     }
 }
