@@ -192,9 +192,10 @@ footer .social-links {
     gap: 32px;
 }
 footer .social-links a {
-    color: #1b6fff;
-    font-size: 2.2rem;
-    transition: color 0.2s, transform 0.2s;
+    margin: 0 10px;
+    font-size: 2rem;
+    display: inline-block;
+    transition: transform 0.2s;
 }
 footer .social-links a:hover {
     color: #00c3ff;
@@ -211,6 +212,13 @@ footer .social-links a .fa-twitch {
 }
 footer .social-links a .fa-k {
     color: #53FC18;
+}
+footer .social-links a .fa-instagram {
+    background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: #fff;
+    border-radius: 20%;
+    padding: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
 .description {
