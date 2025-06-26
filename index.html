@@ -63,6 +63,32 @@
         <a href="https://store.playstation.com/en-hr/search/uncharted" class="cta-btn">Comprar en PlayStation Store</a>
     </section>
 
+    <!-- Nueva sección de Lugares emblemáticos del juego -->
+    <section class="lugares" id="lugares">
+        <h2>Lugares Emblemáticos</h2>
+        <p class="lugares-desc">
+           Descubre algunos de los escenarios más impresionantes y memorables de UNCHARTED: Golden Abyss. 
+            Desde templos ancestrales ocultos en la selva hasta ruinas en lo alto de montañas y cascadas secretas, cada lugar está lleno de detalles y misterios por descubrir. 
+            Sumérgete en paisajes exóticos y vive la aventura explorando entornos únicos que desafían tus habilidades y despiertan tu curiosidad en cada rincón del juego. 
+        </p>
+        <div class="galeria">
+            <img src="imgs/a.webp" alt="Templo antiguo" class="galeria-img">
+            <img src="imgs/b.jpg" alt="Selva misteriosa" class="galeria-img">
+            <img src="imgs/SunsetTop_Set_01.bmp" alt="Camino a las ruinas" class="galeria-img">
+            <img src="imgs/Quivira_Set_12.bmp" alt="Ruinas de Quivara" class="galeria-img">
+            <img src="imgs/q.jpg" alt="Cueva secreta" class="galeria-img">
+            <img src="imgs/j.webp" alt="Río oculto" class="galeria-img">
+            <img src="imgs/rr.jpg" alt="Ciudad perdida" class="galeria-img">
+            <img src="imgs/gg.jpg" alt="Puente colgante" class="galeria-img">
+        </div>
+        <!-- Modal para expandir imagen -->
+        <div id="modal" class="modal">
+            <span class="cerrar">&times;</span>
+            <img class="modal-contenido" id="img-modal">
+            <div id="caption"></div>
+        </div>
+    </section>
+
     <footer>
         <div class="social">
             <h2>Síguenos en redes sociales</h2>
@@ -81,5 +107,21 @@
         </div>
         <p>&copy; 2025 Sony Interactive Entertainment. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        // Galería expandible
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('img-modal');
+        const captionText = document.getElementById('caption');
+        document.querySelectorAll('.galeria-img').forEach(img => {
+            img.onclick = function(){
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        });
+        document.querySelector('.cerrar').onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
